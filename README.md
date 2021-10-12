@@ -1,18 +1,11 @@
 # Git Challenge
-There are two branches, `add-echo` and `add-reverse`. The goal of this challenge is to use `git rebase` to bring both commits onto master. When finished there should be no merge commits or branching. For example, `git log` on the `master` branch should look similar to this:
-```
-/challenge-git master
-⚡ git log
-61a2c67 feat: add reverse route (David Guttman, 7 minutes ago)
-2c2c5d6 feat: add echo route (David Guttman, 10 minutes ago)
-dcc4c0b docs: add more instructions (David Guttman, 11 minutes ago)
-...
-```
-## Instructions
-How to attempt this challenge:
-1) Create a new repo in your account and note the git url
-2) Clone this repo
-3) Solve the challenge
-4) Set your new repo as the origin: `git remote set-url origin ${your repo url}`
-5) Push your solution to your repo
-You must follow these steps for your solution to be accepted -- forks or other methods will not be considered.
+There are two branches, `add-echo` and `add-reverse`. The goal of this challenge is to use `git rebase` to bring both commits onto master. When finished there should be no merge commits or branching. Without forking.
+
+## Completed
+How I attempt this challenge:
+1) Clone the repo https://github.com/Interlincx/challenge-git.git
+2) create the local branches of add-echo and add-reverse {git checkout origin/<branch-name>}
+3) first checkout to add-echo branch and rebase to master and merger it. (First merge the add-echo because "add echo route" commit was below the "add reverse route" commit).
+4) repeat step 3 on add-reverse branch and result in conflict at test/routes.js lib/server.js lib/api.js (resolve the conflict by accepting both changes but at routes.js rearrange the few lines to resolve it)
+5: git remote set-url origin `https://github.com/goverdhan6174/git-challenge-upwork.git`and the push to origin
+
